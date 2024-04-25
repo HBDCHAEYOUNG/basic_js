@@ -46,3 +46,102 @@ for (let i = 1; i <= 10; i++) {
   console.log(i);
 }
 console.log("for 루프 종료"); //->1,2,3,4,for 루프 종료
+
+console.clear();
+
+// return 안썻을때
+
+// let numbers = [1, 2, 3, 4, 5];
+// let kakao = [];
+
+// function solution(nums) {
+//   for (let num of nums) {
+//     if (num < 3) {
+//       console.log("num", num);
+//       kakao.push(num);
+//     } else {
+
+//       return;
+//     }
+//   }
+// }
+
+// solution(numbers);
+// console.log("kakao", kakao);
+
+function hello(test) {
+  // 여기는!!! 근의공식 계산이닷!!!!
+  // 근의공식이 더럽게 길어
+
+  return "채영이가 너무예뻐"; // 여기는 = 이닷!!!!
+}
+
+const 이쁜채영 = hello(123213);
+
+const age = 20;
+if (20 === age) {
+} else if (19 === age) {
+} else if (18 === age) {
+} else if (17 === age) {
+} else if (16 === age) {
+} else if (15 === age) {
+}
+
+switch (age) {
+  case 20:
+  // console.log("age = 20");
+  case 19:
+    break;
+  case 18:
+    break;
+  case 17:
+    break;
+  case 16:
+    break;
+
+  default:
+    break;
+}
+
+const cars = ["black", "blue", "white"];
+for (let i = 0; i < 3; i++) {
+  for (let j = 0; j < 3; j++) {
+    for (let k = 0; k < 3; k++) {
+      console.log(i, j, k);
+    }
+  }
+}
+// 제곱 -> 성능적으로 제곱
+
+// 👍
+// for() {}
+// for() {}
+
+// 😒
+// for(){
+//   for() {}
+// }
+
+const carBlack = {
+  color: "black",
+  name: "G90 Black",
+};
+
+// array
+for (let car of cars) {
+  console.log("car", car);
+}
+
+console.clear();
+// object
+for (let key in carBlack) {
+  console.log("key: ", key);
+  console.log("value: ", carBlack[key]);
+}
+
+console.log("car", carBlack.color);
+console.log("car", carBlack["color"]);
+let color = "color";
+console.log("car", carBlack[color]);
+
+console.log("value", carBlack["color"], carBlack[color]);

@@ -69,7 +69,6 @@ console.log(undefined ?? "hello"); // undefined, null일때에만 뒤에꺼 실�
 // toogle && <Components />
 
 // 삼항 연산자
-console.clear();
 if (true) {
   console.log("요기");
 } else {
@@ -99,16 +98,12 @@ const 채영 = {
   몸무게: 68,
   나이: 29,
 };
-
 const 연인 = [우혁, 채영]; // 객체로 이루어진 배열 -> 객체배열
 
 const 과일 = ["사과", "바나나", "키위"];
 const 사과 = {
   색: "red",
 };
-
-// 배열
-const 자동차들 = [black, blue, white]; // step_1
 
 // step2
 const black = {
@@ -123,6 +118,9 @@ const white = {
   name: "G90",
   image: "url()",
 };
+
+// 배열
+const 자동차들 = [black, blue, white]; // step_1
 
 //step3 객체가 더 디테일
 const red = {
@@ -148,3 +146,40 @@ const 자동차들디테일 = [red, yellow];
 
 // 공통적인 데이터들 -> 배열
 // 그 데이터들의 디테일 -> 객체
+
+const hello = [1, 2, 3];
+console.log(hello.at(-1)); // hello[length - 1]
+const asd = [];
+console.log("hello", hello[0]);
+const 영이 = {
+  name: "윤채영",
+};
+console.log("hello", 영이.name);
+
+const 기분풀림 = "웃음이 많아짐";
+let 까탈우혁 = "까탈우혁";
+let 까탈영이 = 기분풀림;
+
+// 뭔가를 했음
+까탈우혁 = 기분풀림;
+
+console.log(까탈우혁 === 기분풀림);
+const aaa = [123];
+const bbb = aaa;
+console.log(aaa === bbb);
+
+// ----
+console.clear();
+const fastFoods = [
+  { name: "햄버거", age: 10, sex: "male" },
+  { name: "피자", age: 10, sex: "male" },
+  { name: "치킨", age: 10, sex: "male" },
+];
+
+const fast = fastFoods.map(({ name }) => name);
+console.log("fase", fast);
+
+const bbbb = { ...fastFoods };
+bbbb.age = 10;
+console.log("fastFoods", fastFoods);
+console.log("bbbb", bbbb);

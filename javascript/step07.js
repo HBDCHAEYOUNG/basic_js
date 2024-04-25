@@ -235,3 +235,80 @@ console.log(arr100.sort());
 const word = "하나 둘 셋 넷 다섯 여섯 일곱 여덟 아홉 열";
 
 console.log(word.split(" ").flatMap((i) => i.split("")));
+
+//LESSON 배열의 스프레드와 디스트럭쳐링
+// I. 스프레드 spread
+//  join으로 넣는것과 같은 결과!!
+
+// a. 배열을 다수의 인자들로 펼침
+const arr41 = [1, 2, 3, 4, 5];
+console.log(Math.max(...arr41), Math.min(...arr41));
+
+// b. concat보다 가독성있는 배열 결합
+const arr441 = [1, 2, 3];
+const arr442 = [4, 5, 6];
+
+const arr443 = arr441.concat(arr442);
+const arr444 = [...arr441, ...arr442]; //가독성 있음
+
+console.log(arr443, arr444);
+// c. ⭐️ 배열의 얕은 복사
+// d. 💡 push, unshift 대신 사용
+// e. 원본배열을 유지한 채 일정부분만 연결하여 복사
+// splice는 원본배열을 변경
+
+// II. 디스트럭쳐링 destructuring
+// 기본값보다 할당값이 우선
+const arr55 = [1, 2, 3];
+const [f, g, h = 4] = arr55;
+console.log(f, g, h); //->1,2,3
+
+const players = [
+  { name: "순이", score: 91 },
+  { name: "정환", score: 65 },
+  { name: "윤수", score: 72 },
+  { name: "철웅", score: 88 },
+  { name: "지우", score: 98 },
+  { name: "세아", score: 40 },
+];
+
+// 배열 중 첫 3개만 가져옴
+function logTop3([first, second, third]) {
+  console.log(`1등은 ${first}!! 2등과 3등은 ${second}, ${third}입니다.`);
+}
+logTop3(
+  [...players] // 💡 원본의 얕은 복사본을 정렬
+    .sort((a, b) => b.score - a.score)
+    .map(({ name }) => name)
+);
+
+let a = 1;
+let b = 2;
+
+// 서로 값을 바꾸기
+[a, b] = [b, a];
+
+console.log(a, b);
+console.clear();
+
+const numbers = [1, 2, 3, 4, 5];
+let numbersArr = [];
+
+for (const number of numbers) {
+  // if (number % 2 === 1) {
+  //   numbersArr.push(number * 10);
+  // }
+  // number * 10
+  // numbersArr.push(number * 10);
+}
+console.log("홀수:", numbersArr);
+
+const aa = numbers
+  .filter((number) => number % 2 === 1)
+  .map((number) => number * 10);
+
+console.log("aa", aa);
+// result = [10, 30, 50]
+// 1.홀수찾기
+// %2 1
+// 2.10곱하기
