@@ -127,7 +127,7 @@ const carBlack = {
   name: "G90 Black",
 };
 
-// array
+// array test
 for (let car of cars) {
   console.log("car", car);
 }
