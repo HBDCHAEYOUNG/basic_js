@@ -145,3 +145,15 @@ let color = "color";
 console.log("car", carBlack[color]);
 
 console.log("value", carBlack["color"], carBlack[color]);
+
+for (let i = 0; i < 10; i++) {
+  // 10번 반복
+  // 0 ~ 9
+}
+
+let i = 0;
+while (i++ < 10) {
+  // 10번
+  // 9번
+  // 무한루프 -> 서버 다운 (초보자입장 찾기 힘듬,,)
+}
