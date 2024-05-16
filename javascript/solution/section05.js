@@ -1,4 +1,5 @@
 // ! lesson 1
+
 // 객체는 변수를 받으려면 무조건 [] 괄호안에 넣자
 function add(obj, key, value) {
   obj[key] = value;
