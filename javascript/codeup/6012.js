@@ -9,7 +9,7 @@
 // print(b)
 // 과 같은 방법으로 가능하다.
 
-const a = 5,
-  b = 6;
+const a = 5;
+const b = 6;
 console.log(a);
 console.log(b);

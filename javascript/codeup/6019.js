@@ -4,8 +4,8 @@
 // y, m, d = input().split('.')
 // 과 같이 변수들을 순서대로 나열하면 구분기호를 기준으로 잘라 순서대로 저장한다.
 
-const now = new Date();
+const date = "2020.3.4";
 
-console.log("now", now);
+console.log(date.split(".").reverse().join("-"));
 
 //?????
