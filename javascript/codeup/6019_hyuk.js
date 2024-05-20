@@ -7,5 +7,3 @@
 const date = "2020.3.4";
 
 console.log(date.split(".").reverse().join("-"));
-
-//?????

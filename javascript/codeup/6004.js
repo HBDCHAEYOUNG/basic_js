@@ -8,4 +8,4 @@
 // 예시
 // print(" ' ");
 
-console.log("'Hello'");
+console.log(`'Hello'`);
