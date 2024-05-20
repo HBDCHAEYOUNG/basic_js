@@ -6,5 +6,6 @@
 // 출력 예시
 // 1
 
-const a = 1;
+const a = -1;
 console.log("-a", -a);
+console.log("-a", Math.abs(a));

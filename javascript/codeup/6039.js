@@ -7,4 +7,4 @@
 // 출력 예시
 // 16.0
 
-console.log(Math.pow(4.0, 2.0));
+console.log(Math.pow(4.0, 2.0).toFixed(1));

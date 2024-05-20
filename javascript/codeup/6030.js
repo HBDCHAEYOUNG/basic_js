@@ -6,7 +6,6 @@
 
 // 출력 예시
 // 65
-const A = "A";
+const A = "ABCDEF";
 console.log("A", A.charCodeAt());
-
 // ??
