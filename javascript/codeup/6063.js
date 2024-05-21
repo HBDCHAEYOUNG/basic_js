@@ -8,4 +8,5 @@
 function a(x, y) {
   return x > y ? x : y;
 }
+
 console.log(a(123, 456));

@@ -115,3 +115,61 @@ console.log("3:", orgArr3);
 // * forEach
 const arrForEach = [1, 2, 3, 4, 5];
 const result = arrForEach.forEach((itm) => {});
+
+// *! map
+const mapArr = arrForEach.map((item) => item * 3);
+// const mapArrToObj = arrForEach.map((item) => {
+//   console.log("item", item);
+//   return {
+//     name: "hello",
+//   };
+// });
+// console.log("mapArrToObj", mapArrToObj);
+
+const temp = [];
+const mapArr2 = arrForEach.forEach((item) => {
+  temp.push(item * 3);
+});
+console.log("foreach", mapArr2, temp);
+console.log("map", mapArr);
+
+// *! find -> 객체 배열에서 찾기 유용
+const objExam = [
+  { name: "사과", cat: "과일", price: 3000 },
+  { name: "피망", cat: "채소", price: 3500 },
+  { name: "오이", cat: "채소", price: 1500 },
+  { name: "당근", cat: "채소", price: 2000 },
+  { name: "딸기", cat: "과일", price: 5000 },
+  { name: "살구", cat: "과일", price: 2500 },
+];
+
+const findArr = objExam.find((item) => item.name === "사과");
+console.log("findArr", findArr);
+
+// * some 하나라도 충족
+const nubmers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const someArr = nubmers.some((i) => i === 0);
+console.log("someArr", someArr);
+
+// * every 모두 충족되어야함
+const everyArr = nubmers.every((i) => i < 10);
+console.log("everyArr", everyArr);
+
+// *! filter
+const filterArr = objExam.filter((i) => i.cat === "과일");
+console.log("filter", filterArr);
+
+// * reduce
+const reduceArr = arrForEach.reduce((a, b) => a + b, 0);
+console.log("reduceArr", reduceArr);
+
+// *! sort
+console.log(objExam);
+const sortArr = [...objExam].sort((a, b) => b.price - a.price);
+console.log(sortArr);
+
+console.clear();
+// * flatMap
+const flatExam = [1, 2, 3, [[4], [[5]]], [10]];
+console.log(flatExam.flat().map((item) => item * 2)); // o
+console.log(flatExam.flatMap((i) => i * 2)); // x
