@@ -1,30 +1,47 @@
-// 1.변수
-// 변수 let 주머니 생성!!
-// 변수 선언고 값 넣기 동시에 가능
-// 이미 만들어진 주머니 재선언 불가능
-// 선언 전 코드 사용 불가능
+function hello(a, b) {
+  return a + b; // cpu
+}
 
-// x에 1 넣은 뒤 'hello!'로 변경시 y는 기존 위치 그대로~
-let x = 1;
-let y = x;
-console.log("변경 전", x, y); //변경 전 1 1
-x = "Hello!";
-console.log("변경 후", x, y); //변경 후 Hello! 1
+// 👍 let ,const
+// let -> 변수(변해도 수)
+let b = 1;
+console.log("let ", b);
 
-// 2.상수
-// 담긴 값 바뀔 수 없는 주머니
-// 상수 선언 동시 초기화
-// 선언만 불가능
-// 상수 값 변경 불가!!!
+b = 2;
+console.log("let ", b);
 
-// 데이터의 종류!!
-// 불리언, number, string
+// const -> 상수(바뀌면 안되는 수)
+const c = 10;
+console.log("const ", c);
 
-// 이스케이프 표현	대체
-// \'	작은따옴표
-// \"	큰따옴표
-// \n	줄바꿈
-// \t	탭
-// \\	백슬래시
+// 😒 var
+console.log(a); // 호이스팅 때문에 쓰면 안됨 -> 개발자들이 가독성x
+var a;
 
-// ${}안에 상수나 변수, 표현식 등을 삽입 가능
+function hello() {
+  function world() {
+    a = 10;
+  }
+
+  a = 30;
+}
+
+// const , let 예시
+const 몸무게_70 = "70KG";
+const 몸무게_80 = "80KG";
+
+let 김우혁 = "60KG";
+
+김우혁 = 몸무게_80;
+김우혁 = 몸무게_70;
+
+if (김우혁 === 몸무게_70) {
+  console.log("김우혁", 김우혁, "/ 70KG 완성!!");
+} else {
+  console.log("김우혁", 김우혁, "/ 70KG는 아님");
+}
+
+let 윤채영;
+
+// 😒예약어 쓰지말자
+// const function = 213

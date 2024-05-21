@@ -35,7 +35,7 @@ console.log(
 // * at
 console.log(arr.at(1), arr.at(2));
 
-// * includes
+// * includes (false/true 반환)
 console.log(arr.includes(2), arr.includes("abc"), arr.includes(true));
 
 // * indexOf : 없을 시 -1 반환
@@ -71,7 +71,7 @@ console.log("arr", arr);
 arr.splice(1, 1, "우혁이", "채영이");
 console.log(arr);
 
-// * slice
+// * slice 슬라이스해서 새로 만들?
 const sliceArr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 const arr2 = sliceArr.slice(3);

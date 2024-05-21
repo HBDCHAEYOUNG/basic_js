@@ -1,201 +1,185 @@
-/* Section02 자료형과 연산자
-!02-1 - 자료형 데이터의 종류
+// 데이터 종류
+const a = 1000; // number 타입
+const b = "텍스트"; // string 타입
+const c = true; // boolean 타입
 
-typeof 연산자 : 뒤에 오는 값의 자료형을 반환
+const d = null; // null
+const e = undefined; // undefined
 
-1.boolean
-2.number
-3.string
-4.undefined
-5.null(의도적인 빈 값) */
+// 메모리
+// 변수랑 값을
+// d -> 의도적으로 빈값
+// e -> 의도하지않은 빈값
 
-// const a = true,
-//   b = 123.45,
-//   c = "안녕하세요!";
-// console.log(a, typeof a); -> boolean
-// console.log(b, typeof b); -> number
-// console.log(c, typeof c); -> string
-// console.log(typeof typeof true, typeof typeof 123.45, typeof typeof "Hello"); -> string string string
+// string관련
+const b1 = "안녕하세요";
+console.log(b1 + "!"); // 일반
+console.log(`${b1}! ${a}살에는 애기였습니다.`); // 백틱
 
-// let x = null;
-// console.log(typeof null, typeof x); ->Object(객체)를 반환.. 객체는 원시타입이 아님
+const javascript_A = a + "!"; // javascript
+const typescript_B = String(a) + "!"; // typescript
 
-/*
-!02-2 - 자료형과 정적, 동적 타입
-js->동적타입 
-특정 값 할당된 변수에, 다른 자료형 넣는 것 가능하나 오류에 취약
+console.log(typeof javascript_A); // 일반
+console.log(typeof typescript_B); // 일반
 
-연산 오류
-1+1 ->2
-1+'1' ->11
-*/
+// 비교연산 > 타입스크립트
+console.clear();
+if (a === 1) {
+  console.log("맞습니다");
+} else {
+  console.log("틀립니다");
+}
 
-/*
-!02-3 - 문자열(string)-텍스트 데이터
-이스케이프표현	대체
-     \'	     작은따옴표
-     \"	     큰따옴표
-     \n	     줄바꿈
-     \t	     탭
-     \\	     백슬래시
+// number관련
+let bb = 10;
+bb += a; // 1010 bb = bb + a;
+// * "+=" 요녀석은 텍스트에서도 씀
+console.log(bb);
 
-``(백틱) : 문자열 안에 탭과 줄바꿈 그대로 사용 가능!
+// NaN(Not a Number) => 숫자와 다른 타입의 계산을 할때(+빼고)
+let x = 1 / "abc";
+let y = 2 * "가나다";
+let z = NaN;
 
-템플릿 리터럴 - 백틱 사용
-${}안에 상수나 변수, 표현식 등을 삽입 가능
-*/
-const NAME = "치즈덕";
-let age = 3;
-let married = false;
-console.log(
-  `제 이름은 ${NAME}, 나이는${age}살 이구요, ${
-    married ? "기혼" : "미혼"
-  }입니다.`
-);
+// 소수점은 정확하게 같게 할수없고 정확하게 사용하고싶다면 라이브러리 사용
+console.log(0.1 + 0.2, 0.1 + 0.2 === 0.3); // false
 
-/*
-!02-4 - 문자열에 사용되는 연산자
-== 값 일치
-=== 자료형도 값도 일치
-!= 값 불일치
-!== 자료형 및 값 불일치
-x<y x먼저
+// boolean
+// console.log(!!true);
+const text_a = "text"; // true
+const number_a = 100; // true
+const number_c = -10; // true
+const arr = []; // true
+const obj = {}; // true
 
-+= 부수효과 o
-부수효과의 왼쪽 값은 대상(변수)이어야함
-*/
+const text_b = ""; // false
+const number_b = 0; // false
+const nu = null; // false
+const un = undefined; // false
+const na = NaN; // false
 
-/*
-!02-5 - 숫자 관련 연산자
-NaN
-isNaN : 숫자가 아니다 싶으면 true
-Number.isNaN : 숫자형 자로형 주제에 숫자가 아니면 true
+// || -> or , && -> and
+console.log(true && true && !false); // 무조건 true일때(ex. 반환)
+console.log(!(true && true && false)); // 무조건 true일때(ex. 반환)
+console.log(true || true || !false); // 무조건 true일때(ex. 반환)
 
-a++ 값 그대로
-++a 1 증가한 값
+console.log(true && 5); // true일때 뒤에꺼 보여줌
+console.log(false || 50); // false일때 뒤에꺼 보여줌
+console.log(undefined ?? "hello"); // undefined, null일때에만 뒤에꺼 실행
+// toogle && <Components />
 
-*/
-console.log(typeof "1", isNaN("1"), Number.isNaN("1")); // 특정 숫자로 변환 가능한 문자
+// 삼항 연산자
+if (true) {
+  console.log("요기");
+} else {
+  console.log("저기");
+}
 
-/* 
-!02-6 - 불리언 관련 연산자
+// react jsx -> html
+true ? console.log("요기") : console.log("저기");
 
-- true=!false=!!true=!!!false
-- And/OR 연산자
-- 단축평가(shore circuit)
-a. && - And : 양쪽 모두 true 여부 반환
-   true && ~~~ : ~~~실행
-   앞의 것이 false면 뒤 실행XXX
-b. || - Or : 한쪽이라도 true 여부 반환
-   false || ~~~ :~~~실행
-   앞의 것이 true면 뒤 실행XXX
+// 쉼표 연산자
+let xx = 1;
 
-- 삼항연산자 -> ~ ? ~ : ~
+// console.log(++xx);
+// console.log(xx++);
+// console.log(xx);
+xx += 1;
+console.log(xx);
 
-- Truthy vs Falsy
-true 또는 false로 평가되는 값들
-*/
-// let x = true;
-// x = false;
-
-// let y = x ? "참입니다." : "거짓입니다.";
-// console.log(y);
-
-//truthy
-// console.log(
-//   1.23 ? true : false,
-//   -999 ? true : false,
-//   "0" ? true : false,
-//   " " ? true : false,
-//   Infinity ? true : false,
-//   -Infinity ? true : false,
-//   {} ? true : false,
-//   [] ? true : false
-// );
-//모두 true
-// ⚠️ true와 `같다`는 의미는 아님
-console.log(1.23 == true, " " == true, {} == true);
-
-//falsy
-// console.log(
-//   0 ? true : false,
-//   -0 ? true : false,
-//   "" ? true : false,
-//   null ? true : false,
-//   undefined ? true : false,
-//   NaN ? true : false
-// );
-//모두 false
-// 💡 어떤 값들은 false로 타입변환됨
-// console.log(0 == false, 0 === false, "" == false, "" === false);
-// console.log(null == false, undefined == false, NaN == false);
-
-//0 ->false 1->true로 구분
-// let x = 0;
-// let y = 1;
-
-// x && x++;
-// y && y++;
-
-// console.log(x, y); //0 2
-
-// let x = 123;
-
-// console.log("x는 홀수인가?", !!(x % 2));
-
-/*
-!02-07 - 연산자 마무리
-
-- ??-null 병합 연산자
-null 또는 undefined만 대체
-
-💡 우선순위 높은순 현재까지 다룬 연산자들 중
-순위	연산자들
- 1	  !, +, -, ++, --, typeof
- 2	  **
- 3	  *, /, %
- 4	  +, -
- 5	  <, <=, >, >=
- 6	  ==, !=, ===, !==
- 7	  &&
- 8	  ||
- 9	  =, +=, -=, *=, /=, %=, **=, &&=, ||=, ??=
- 10	  ,
-*/
-//!질문 이고모야
-// let a = false;
-// let b = 0;
-// let c = "";
-// let d = null;
-// let e;
-
-// console.log(
-//   a ?? "1기본값",
-//   b ?? "2기본값",
-//   c ?? "3기본값",
-//   d ?? "4기본값",
-//   e ?? "5기본값"
-// );
-
-/* 
-! 02-9 - 객체와 배열 미리보기
-
-I. 객체 미리보기
-const person = {
-  key : value
-  name : 김우혁
+// 객체, 배열
+const 우혁 = {
+  키: 177,
+  몸무게: 68,
+  나이: 29,
 };
- 1.프로퍼티 접근 두방법
-   a - 상수or변수이름.key이름 ex) person.name
-   b - 상수or변수이름['key이름'] ex person['name']
-   c - 키 in 객체 로 특정 키 포함 여부 확인 가능
+const 채영 = {
+  키: 177,
+  몸무게: 68,
+  나이: 29,
+};
+const 연인 = [우혁, 채영]; // 객체로 이루어진 배열 -> 객체배열
 
- 2.프로퍼티 수정 및 추가 가능
+const 과일 = ["사과", "바나나", "키위"];
+const 사과 = {
+  색: "red",
+};
 
-II. 배열 미리보기
-const weekdays = ['월','화','수','목','금','토','일']
- 1. 값과 길이 접근
-   a - console.log(weekdays[0]) -> 월 
-   b - console.log(weekdays.length) -> 7
-   c - console.log(weekdays[weekdays.length-1]) -> 일
-*/
+// step2
+const black = {
+  name: "G90 Black",
+  image: "url()",
+};
+const blue = {
+  name: "G90 LONH WHEEL BASE",
+  image: "url()",
+};
+const white = {
+  name: "G90",
+  image: "url()",
+};
+
+// 배열
+const 자동차들 = [black, blue, white]; // step_1
+
+//step3 객체가 더 디테일
+const red = {
+  name: "G90 RED",
+  image: "url()",
+  엔진: [
+    { 이름: "가솔린 3.5 터보", 가격: 0 },
+    { 이름: "가솔린 3.5 터보 48V 일렉트릭 슈퍼차저", 가격: 6000000 },
+  ],
+  light: ["white", "yellow"],
+};
+const yellow = {
+  name: "G90 RED",
+  image: "url()",
+  엔진: [
+    { 이름: "가솔린 3.5 터보", 가격: 0 },
+    { 이름: "가솔린 3.5 터보 48V 일렉트릭 슈퍼차저", 가격: 6000000 },
+  ],
+  light: ["white", "yellow"],
+};
+//step4
+const 자동차들디테일 = [red, yellow];
+
+// 공통적인 데이터들 -> 배열
+// 그 데이터들의 디테일 -> 객체
+
+const hello = [1, 2, 3];
+console.log(hello.at(-1)); // hello[length - 1]
+const asd = [];
+console.log("hello", hello[0]);
+const 영이 = {
+  name: "윤채영",
+};
+console.log("hello", 영이.name);
+
+const 기분풀림 = "웃음이 많아짐";
+let 까탈우혁 = "까탈우혁";
+let 까탈영이 = 기분풀림;
+
+// 뭔가를 했음
+까탈우혁 = 기분풀림;
+
+console.log(까탈우혁 === 기분풀림);
+const aaa = [123];
+const bbb = aaa;
+console.log(aaa === bbb);
+
+// ----
+console.clear();
+const fastFoods = [
+  { name: "햄버거", age: 10, sex: "male" },
+  { name: "피자", age: 10, sex: "male" },
+  { name: "치킨", age: 10, sex: "male" },
+];
+
+const fast = fastFoods.map(({ name }) => name);
+console.log("fase", fast);
+
+const bbbb = { ...fastFoods };
+bbbb.age = 10;
+console.log("fastFoods", fastFoods);
+console.log("bbbb", bbbb);
