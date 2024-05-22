@@ -12,16 +12,18 @@
 // A
 
 const x = -2147483648;
+if (x === 0) return;
+
 if (x < 0) {
-  if (x % 2 === 0) {
-    console.log("A");
-  } else {
-    console.log("B");
-  }
+  if (x % 2 === 0) console.log("A");
+  else console.log("B");
 } else {
-  if (x % 2 === 0) {
-    console.log("C");
-  } else {
-    console.log("D");
-  }
+  if (x % 2 === 0) console.log("C");
+  else console.log("D");
+}
+
+if (x < 0) {
+  console.log(x % 2 === 0 ? "A" : "B");
+} else {
+  console.log(x % 2 === 0 ? "C" : "D");
 }

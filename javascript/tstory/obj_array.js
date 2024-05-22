@@ -17,8 +17,8 @@ const arr = [1, 2, 3, 4, 5];
 // }
 
 // 4. map
-arr.map((item) => console.log(item));
-
+const a = arr.map((item) => item);
+console.log("a", a);
 const arrlike = {
   0: "🍎",
   1: "🍌",

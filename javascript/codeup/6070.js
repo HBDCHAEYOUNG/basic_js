@@ -13,15 +13,27 @@
 // winter
 
 const season = 12;
-if (season >= 12 || season <= 2) {
-  console.log("winter");
-  return;
-} else if (season >= 9) {
-  console.log("fall");
-  return;
-} else if (season >= 6) {
-  console.log("summer");
-  return;
-} else {
-  console.log("spring");
-}
+
+const winter = season === 12 || season === 1 || season === 2; // true
+const spring = season === 3 || season === 4 || season === 5; // false
+const summer = season === 6 || season === 7 || season === 8; // false
+const fall = season === 9 || season === 10 || season === 11; // false
+
+if (winter) return console.log("winter");
+else if (spring) return console.log("spring");
+else if (summer) return console.log("summer");
+else if (fall) return console.log("fall");
+else return console.log("error");
+
+// if (season >= 12 || season <= 2) {
+//   console.log("winter");
+//   return;
+// } else if (season >= 9) {
+//   console.log("fall");
+//   return;
+// } else if (season >= 6) {
+//   console.log("summer");
+//   return;
+// } else {
+//   console.log("spring");
+// }

@@ -16,18 +16,9 @@
 
 const x = 73;
 
-if (x >= 90) {
-  console.log("A");
-  return;
-}
-if (x >= 70) {
-  console.log("b");
-  return;
-}
-if (x >= 40) {
-  console.log("C");
-  return;
-} else {
-  console.log("D");
-}
+if (x >= 90) return console.log("A");
+else if (x >= 70) return console.log("b");
+else if (x >= 40) return console.log("C");
+else return console.log("D");
+
 //? 더 간단 없어...?ㅜ

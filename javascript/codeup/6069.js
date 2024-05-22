@@ -15,21 +15,27 @@
 // best!!!
 const x = "A";
 
-if (x === "A") {
-  console.log("best!!!");
-  return;
-}
-if (x === "B") {
-  console.log("good!!!");
-  return;
-}
-if (x === "C") {
-  console.log("run!!!");
-  return;
-}
-if (x === "D") {
-  console.log("slowly!!!");
-  return;
-} else {
-  console.log("what?");
+// if (x === "A") return console.log("best!!!");
+// else if (x === "B") return console.log("good!!!");
+// else if (x === "C") return console.log("run!!!");
+// else if (x === "D") return console.log("slowly!!!");
+// else return console.log("what?");
+
+switch (x) {
+  case "A":
+    console.log("best!!!");
+    break;
+  case "B":
+    console.log("good!!!");
+    break;
+  case "C":
+    console.log("run!!!");
+    break;
+  case "D":
+    console.log("slowly!!!");
+    break;
+
+  default:
+    console.log("what?");
+    break;
 }
