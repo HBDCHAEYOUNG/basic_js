@@ -68,7 +68,7 @@ console.log(q, arr);
 // 1번 인덱스부터 3개 요소 제거 후 '가', '나', '다' 추가
 console.clear();
 console.log("arr", arr);
-arr.splice(1, 1, "우혁이", "채영이");
+arr.splice(1, 3, "우혁이", "채영이");
 console.log(arr);
 
 // * slice 슬라이스해서 새로 만들?
