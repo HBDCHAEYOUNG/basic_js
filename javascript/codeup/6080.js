@@ -15,8 +15,8 @@
 const n = 2;
 const m = 3;
 
-for (let i = 1; i <= m; i++) {
-  for (let i = 1; i <= m; i++) {
-    console.log(i);
+for (let i = 1; i <= n; i++) {
+  for (let j = 1; j <= m; j++) {
+    console.log(i, j);
   }
 }
