@@ -12,8 +12,26 @@
 // 출력 예시
 // 1 2 X 4 5 X 7 8 X
 
-const input = 9;
-for (let i = 1; i <= input; i++) {
-  if (i % 3 === 0) console.log("X");
-  else console.log(i);
+// const input = 9;
+// let answer =[]
+// for (let i = 1; i <= input; i++) {
+//   if (i % 3 === 0) answer.push("X");
+//   else answer.push(i);
+// }
+
+// ! feedback
+const number = 66;
+const answer = [];
+for (let i = 1; i <= number; i++) {
+  const str = i.toString();
+  if (str.includes("3") || str.includes("6") || str.includes("9")) {
+    let count = 0;
+    for (const item of str) {
+      if (item === "3" || item === "6" || item === "9") count += 1;
+    }
+    answer.push("X".repeat(count));
+  } else {
+    answer.push(i);
+  }
 }
+console.log(answer.join(" "));

@@ -12,3 +12,11 @@
 // 63
 
 // 쉬벌!쉬볼!쉬벌!
+function solution(a, b, c) {
+  for (let day = 1; ; day++) {
+    if (day % a === 0 && day % b === 0 && day % c === 0) {
+      return console.log(day);
+    }
+  }
+}
+solution(3, 7, 9);

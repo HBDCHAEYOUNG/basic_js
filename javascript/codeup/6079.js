@@ -13,14 +13,24 @@
 //3. 조건: 합한 값<input
 //4. 합한값 하나만 출력 -> for 밖에서 출력..
 
+// const input = 55;
+// let sum = 0;
+// let count = 1;
+// function a(i) {
+//   for (let i = 1; i < 10; i++) {
+//     if (sum > 55) return;
+//     sum += i;
+//     count++;
+//   }
+//   // console.log(count);
+// }
+
+// a(input);
+
+// ! feedback
 const input = 55;
 let sum = 0;
-function a(i) {
-  for (let i = 1; i < 10; i++) {
-    if (sum > 55) return;
-    sum += i;
-  }
-  console.log("sum", i);
+for (let i = 0; i < input; i++) {
+  sum += i;
+  if (sum === input) return console.log(i);
 }
-
-console.log("55", a(input));

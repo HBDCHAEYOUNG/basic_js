@@ -11,11 +11,28 @@
 
 // 출력 예시
 // 1 2 1 1 2 1 1 0 1 0 0 0 0 0 0
-const input = 10;
+// 1,2,3,4,5,6,7,8,9,10,11,12,13,14, ... ,23
 const list = [1, 3, 2, 2, 5, 6, 7, 4, 5, 9];
 let answer = [];
 
-for (i = 0; i < input; i++) {
-  let count = 0;
+// //1. 1~10까지 i 출력
+// //2. 배열안에 i 몇개있는지 찾는 식 만들어!
+// for (i = 0; i < list.length; i++) {
+//   list[i]
+//   console.log(list[i]);
+// }
+
+// !feedback
+// 1. 23개의 0으로 된 배열을 생성 -> arrs
+// 2. for문 작성(list)
+// 3. list에서 각각의 반복문을 통해 index값과 list[i]의 값을 받기
+// 4. arrs[list[i]]을 개수를 더해 넣어주기
+const arrs = Array(23).fill(0);
+for (let item of list) {
+  arrs[item - 1] += 1;
 }
-console.log(answer);
+console.log(arrs.join(" "));
+console.log(arrs.join(" ") === "1 2 1 1 2 1 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0");
+
+// arr[0, 0, 0, 0 0 0 0]
+// arr 1 2 1 1 2 1 1

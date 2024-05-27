@@ -2,6 +2,12 @@
 
 // 예를 들어
 // 2 6 18 54 162 486 ... 은
+
+//2
+//2*3
+//2*3*3
+//2*3*3*3
+
 // 2부터 시작해 이전에 만든 수에 3을 곱해 다음 수를 만든 수열이다.
 
 // 이러한 것을 수학에서는 앞뒤 수들의 비율이 같다고 하여
@@ -19,7 +25,7 @@
 
 // 출력 예시
 // 1458
-
+/* 
 function GPsequence(a, r, n) {
   let multiplication = a;
   for (let i = a; i <= n; i++) {
@@ -28,4 +34,11 @@ function GPsequence(a, r, n) {
   console.log(multiplication);
 }
 
-GPsequence(2, 3, 7);
+GPsequence(2, 3, 7); */
+
+// ! feedback
+function GPsequence(a, r, n) {
+  return a * r ** (n - 1);
+}
+
+console.log(GPsequence(2, 3, 7));

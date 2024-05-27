@@ -14,14 +14,21 @@
 // 입력 예시
 // 1 3 5
 
+// 1, 4, 7, 10, 13, 16
 // 출력 예시
 // 13
-function sequence(a, d, n) {
+
+/* function sequence(a, d, n) {
   let sum = a;
   for (let i = a; i <= n - 1; i++) {
     sum += d;
   }
   console.log(sum);
-}
+} */
 
-sequence(1, 3, 5);
+// ! feedback
+function nthTerm(a, d, n) {
+  return a + (n - 1) * d;
+}
+const result = nthTerm(1, 3, 5);
+console.log(result);

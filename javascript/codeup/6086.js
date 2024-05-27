@@ -16,11 +16,20 @@
 // 출력 예시
 // 66
 
-const input = 57;
+/* const input = 57;
 let sum = 0;
 for (let i = 1; i < 10000; ++i) {
   if (sum < input) {
     sum = sum + i;
   }
+}
+console.log(sum); */
+
+// ! feedback
+const input = 57;
+let sum = 0;
+for (let i = 1; i < 10000; i++) {
+  if (sum < input) sum += i;
+  else break;
 }
 console.log(sum);

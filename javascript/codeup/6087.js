@@ -19,7 +19,7 @@
 // 출력 예시
 // 1 2 4 5 7 8 10
 
-const input = 0;
+const input = 10;
 for (let i = 1; i <= input; i++) {
-  if (i % 3 != 0) console.log(i);
+  if (i % 3 !== 0) console.log(i);
 }
