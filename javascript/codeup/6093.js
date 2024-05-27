@@ -15,9 +15,9 @@
 const input = 10;
 const arrs = [10, 4, 2, 3, 6, 6, 7, 9, 8, 5];
 const answer = [];
-for (let i = input; i > 0; i--) {
-  answer.push(arrs[i - 1]);
-}
-console.log(answer.join(" "));
+// for (let i = input; i > 0; i--) {
+//   answer.push(arrs[i - 1]);
+// }
+// console.log(answer.join(" "));
 
 console.log(arrs.reverse().join(" "));
