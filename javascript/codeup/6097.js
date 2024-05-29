@@ -34,3 +34,22 @@ const input = [
   [3, 1, [2, 3]],
   [4, 1, [2, 5]],
 ];
+// 0 -> 몇번 반복
+// 1 -> 0:가로 (x,y+0)
+//      1:세로 (x+0,y)
+// 2 -> 시작 좌표
+
+for (let i = 0; i < 3; i++) {
+  for (let j = 0; j < input[i][0]; j++) {
+    if (input[i][1] === 0) {
+      const [x, y] = input[i][2];
+      arrs[x - 1][y - 1 + j] = 1;
+    } else {
+      const [x, y] = input[i][2];
+      arrs[x - 1 + j][y - 1] = 1;
+    }
+  }
+}
+for (const arr of arrs) {
+  console.log(arr.join(" "));
+}
