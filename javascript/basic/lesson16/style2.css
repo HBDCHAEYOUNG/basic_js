@@ -1,0 +1,26 @@
+body {
+  padding: 16px 32px;
+  font-size: 1.24em;
+}
+
+button,
+input {
+  margin-bottom: 18px;
+  padding: 4px 12px;
+  font-size: 1.24em;
+  cursor: pointer;
+}
+
+#button2 {
+  width: 450px;
+}
+
+#button2 > span:last-child {
+  margin-left: 4px;
+  padding: 8px 12px;
+  font-weight: bold;
+  color: white;
+  background-color: tomato;
+  padding: 2px 8px;
+  border-radius: 14px;
+}
