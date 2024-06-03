@@ -71,5 +71,5 @@ while (true) {
 }
 
 for (const item of graph) {
-  console.log(item.join(" "));
+  console.log(item.join("  "));
 }
