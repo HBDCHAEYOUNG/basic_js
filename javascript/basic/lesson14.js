@@ -1,9 +1,6 @@
 // n초 뒤 실행
 console.log(1);
-setTimeout(() => {
-  console.log("setTimeout 타임아웃!");
-  console.log(2);
-}, 1000);
+
 console.log(3);
 
 // let time = 3;
